@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-class Square:
-    """square"""
-    def __init__(self):
-        """initialize square attributes"""
-        return None
+# 0-square.py
+# Benjamin Taura <1507@holbertonschool.com>
+"""Define a new class: """
+
+
+class Square(object):
+    """A simple example class"""
+    pass
