@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-class Square:
-    """square"""
-    def __init__(self, size):
-        """
-        initialize square attributes
-        Args:
-        size (int): size of square
-        Returns:
-        None
-        """
+# 1-square.py
+# Benjamin  Taura <1507@holbertonschool.com>
+"""Private instance attribute: """
 
-        self.__size = size
+
+class Square(object):
+    """class variable size"""
+    def __init__(self, size):
+        """initialize size"""
+        self.__size = 
