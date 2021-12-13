@@ -26,8 +26,8 @@ The function can receive a parameter followed by a space
 If the function receives an empty string it will read as a space 
 
 ::
-    >>> say_my_name("", "Carlos")
-    My name is  Carlos
+    >>> say_my_name("", "Benjamin")
+    My name is  Benjamin
 
     >>> say_my_name("Bob", "")
     My name is Bob 
