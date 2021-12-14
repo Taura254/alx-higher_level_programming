@@ -9,6 +9,8 @@
 
 class Rectangle(object):
     """Rectangle: Define new class"""
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initialize new class rectangle
         Args:
@@ -17,6 +19,7 @@ class Rectangle(object):
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -80,4 +83,5 @@ class Rectangle(object):
 
     def __del__(self):
         """Delete class rectangle"""
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
