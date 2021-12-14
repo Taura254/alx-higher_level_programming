@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 8-rectangle.py
-# Benjamin Taura <1507@holbertonschool.com>
-""" File name : 8-rectangle.py
-    Compare rectangles
+# 9-rectangle.py
+# Benjamin Taura254 <1507@holbertonschool.com>
+""" File name : 9-rectangle.py
+    A square is a rectangle
     It is not allowed to import any module
 """
 
@@ -65,6 +65,11 @@ class Rectangle(object):
         if self.__width == 0 or self.__height == 0:
             return 0
         return ((2 * self.__width) + (2 * self.__height))
+
+    @classmethod
+    def square(cls, size=0):
+        """ Returns a new instance of Rectangle """
+        return cls(size, size)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
