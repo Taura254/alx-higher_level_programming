@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 5-rectangle.py
+# 7-rectangle.py
 # Benjamin Taura <1507@holbertonschool.com>
-""" File name : 5-rectangle.py
-    Detect instance deletion : delete class
+""" File name : 7-rectangle.py
+    Change representation
     It is not allowed to import any module
 """
 
@@ -10,6 +10,7 @@
 class Rectangle(object):
     """Rectangle: Define new class"""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize new class rectangle
@@ -68,12 +69,12 @@ class Rectangle(object):
     def __str__(self):
         """Print the rectangle with the character #"""
         rectangle = ""
-        if self.__height == 0 or self.__width == 0:
+        if (self.__height or self.__width) == 0:
             return rectangle
         for i in range(self.__height):
-            for j in range(self.__width):
-                rectangle += '#'
-            rectangle += "\n"
+            for i in range(self.__width):
+                rectangle += str(self.print_symbol)
+            rectangle += '\n'
         rectangle = rectangle[:-1]
         return rectangle
 
