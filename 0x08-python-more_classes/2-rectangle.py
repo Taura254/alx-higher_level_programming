@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 1-rectangle.py
+# 2-rectangle.py
 # Benjamin Taura <1507@holbertonschool.com>
-""" File name : 1-rectangle.py
-    Real definition of a rectangle : class that defines a rectangle
+""" File name : 2-rectangle.py
+    Area and Perimeter : calculate area and perimeter
     It is not allowed to import any module
 """
 
@@ -51,3 +51,13 @@ class Rectangle(object):
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Define area"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Define perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return ((2 * self.__width) + (2 * self.__height))
