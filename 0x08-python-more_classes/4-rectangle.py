@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 3-rectangle.py
+# 4-rectangle.py
 # Benjamin Taura <1507@holbertonschool.com>
-""" File name : 3-rectangle.py
-    String representation : print #
+""" File name : 4-rectangle.py
+    Eval is magic: print #
     It is not allowed to import any module
 """
 
@@ -64,11 +64,14 @@ class Rectangle(object):
 
     def __str__(self):
         """ string representation of square """
-        string = ""
-        if self.__height == 0 or self.__width == 0:
+        if self.width == 0 or self.height == 0:
             return ""
-        wide = "#" * self.width
+        x = "#" * self.width
+        rect = x
         for i in range(self.height - 1):
-            string += wide + "\n"
-        string += wide
-        return str(string)
+            rect += "\n" + x
+        return rect
+
+    def __repr__(self):
+        """String representation of the rectangle"""
+        return "Rectangle({}, {})".format(str(self.width), str(self.height))
