@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-# 2-rectangle.py
+# 3-rectangle.py
 # Benjamin Taura <1507@holbertonschool.com>
-""" File name : 2-rectangle.py
-    Area and Perimeter : calculate area and perimeter
+""" File name : 3-rectangle.py
+    String representation : print #
     It is not allowed to import any module
 """
 
@@ -60,4 +60,15 @@ class Rectangle(object):
         """Define perimeter"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return ((2 * self.__width) + (2 * self.__height))
+        return (2 * self.__width) + (2 * self.__height)
+
+    def __str__(self):
+        """ string representation of square """
+        string = ""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        wide = "#" * self.width
+        for i in range(self.height - 1):
+            string += wide + "\n"
+        string += wide
+        return str(string)
