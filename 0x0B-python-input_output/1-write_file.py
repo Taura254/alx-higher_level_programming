@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Written file"""
+"""Write file module"""
 
 
-def write_file(filename=""):
+def write_file(filename="", text=""):
     """Returns the written file"""
     with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+        print(f.create(), end="")
