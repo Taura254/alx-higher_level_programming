@@ -2,10 +2,7 @@
 """Written file"""
 
 
-def write_file(filename="",text=""):
+def write_file(filename=""):
     """Returns the written file"""
-    with open(filename, 'r') as o:
-        linum = 0
-        for line in o:
-            linum += 1
-        return linum
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
