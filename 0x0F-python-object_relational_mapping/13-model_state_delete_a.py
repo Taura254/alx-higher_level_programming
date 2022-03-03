@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-# Changes the name of the State object with id = 2 to
-# New Mexico in the database hbtn_0e_6_usa.
-# Usage: ./12-model_state_update_id_2.py <mysql username> /
-#                                        <mysql password> /
-#                                        <database name>
+# Deletes all State objects with a name containing
+# the letter a from the database hbtn_0e_6_usa.
+# Usage: ./13-model_state_delete_a.py <mysql username> /
+#                                     <mysql password> /
+#                                     <database name>
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -16,6 +16,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
+    for state in session.query(State):
+        if "a" in state.name:
+            session.delete(state)
     session.commit()
